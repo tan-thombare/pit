@@ -1,0 +1,36 @@
+[project]
+name = "prompt-injection-tester"
+version = "0.1.0"
+description = "Local desktop application for automated LLM prompt-injection security testing"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.141.1",
+    "google-genai>=2.23.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.7.0",
+    "python-dotenv>=1.2.3",
+    "torch>=2.2.0",
+    "transformers>=4.40.0",
+]
+
+[project.scripts]
+pit = "pit.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pyinstaller>=6.0.0",
+]
