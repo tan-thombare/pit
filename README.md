@@ -5,6 +5,7 @@
 [![Python](https://img.shields.io/badge/Python-3.12%2B-blue.svg)](https://python.org)
 [![uv](https://img.shields.io/badge/Package_Manager-uv-blueviolet.svg)](https://github.com/astral-sh/uv)
 [![Privacy](https://img.shields.io/badge/Privacy-100%25_Local-brightgreen.svg)](#how-it-works)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
@@ -106,8 +107,18 @@ You can also load a **custom attack suite** from your own JSON file.
 
 ---
 
-## Running Tests
+## Contributing
 
-```bash
-.venv\Scripts\python.exe -m pytest
-```
+Contributions are welcome! The two main ways to contribute are:
+
+- **Adding new prompt injection attacks** — expand the built-in library
+- **Improving the provider/API layer** — add support for new LLM backends
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidance on both.
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
